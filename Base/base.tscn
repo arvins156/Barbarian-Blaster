@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://4lhayyr5w3j4"]
+
+[ext_resource type="Script" path="res://Base/base.gd" id="1_b1lrj"]
+[ext_resource type="PackedScene" uid="uid://lyhfs35el1gt" path="res://Assets/Base.glb" id="2_4m50w"]
+[ext_resource type="FontFile" uid="uid://b5faeg48bwy7a" path="res://Assets/Asap/static/Asap-Bold.ttf" id="2_50ky8"]
+
+[node name="Base" type="Node3D" groups=["base"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -6)
+script = ExtResource("1_b1lrj")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
+billboard = 1
+text = "staring health"
+font = ExtResource("2_50ky8")
+font_size = 500
+outline_size = 100
+
+[node name="Base" parent="." instance=ExtResource("2_4m50w")]
